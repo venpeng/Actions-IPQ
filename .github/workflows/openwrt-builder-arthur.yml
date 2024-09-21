@@ -21,8 +21,8 @@ env:
   REPO_BRANCH: main
   FEEDS_CONF: feeds.conf.default
   CONFIG_FILE: config/arthur/.config
-  DIY_P1_SH: diysh/arthur/diy-part1.sh
-  DIY_P2_SH: diysh/arthur/diy-part2.sh
+  DIY_P1_SH: diysh/diy-part1.sh
+  DIY_P2_SH: diysh/diy-part2.sh
   UPLOAD_BIN_DIR: false
   UPLOAD_FIRMWARE: true
   UPLOAD_RELEASE: true

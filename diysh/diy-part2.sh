@@ -12,19 +12,16 @@
 
 # 修改默认主题
 #sed -i 's/luci-theme-bootstrap/luci-theme-argon/g' feeds/luci/collections/luci/Makefile
+sed -i "s/luci-theme-bootstrap/luci-theme-argon/g" $(find ./feeds/luci/collections/ -type f -name "Makefile")
 
-# 修改主机名称
+# 修改默认主机名,原LibWrt
 #sed -i 's/OpenWrt/P3TERX-Router/g' package/base-files/files/bin/config_generate
+#sed -i "s/hostname='.*'/hostname='OpenWrt'/g" ./package/base-files/files/bin/config_generate
 
-# 修改网关地址
+# 修改默认IP地址
 #sed -i 's/192.168.1.1/192.168.2.1/g' package/base-files/files/bin/config_generate
+#sed -i "s/192\.168\.[0-9]*\.[0-9]*/192.168.11.1/g" ./package/base-files/files/bin/config_generate
 
 # 修改wifi名称
 #sed -i 's/OpenWrt/ASUS/g' package/kernel/mac80211/files/lib/wifi/mac80211.sh
-
-# 下载ServerChan
-#git clone https://github.com/tty228/luci-app-serverchan ../diy/luci-app-serverchan
-
-#echo '集成diy目录'
-#ln -s ../../diy ./package/openwrt-packages
-
+#sed -i "s/\.ssid=.*/\.ssid=OpenWrt/g" $(find ./package/kernel/mac80211/ ./package/network/config/ -type f -name "mac80211.*")
